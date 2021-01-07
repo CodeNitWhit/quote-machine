@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:description" content="Animated CSS Art/ Random Quote Machine" />
+    <title>Animated Quote Machine</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <main>
+        <div id=#lip-container>
+            <h1></h1>>
+            <svg id="lips" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 689.47 487.36">
+                <defs>
+                    <style>.cls-1{fill:red;}.cls-2{fill:#efd3ce;}</style>
+                </defs>
+                <g id="Layer_2" data-name="Layer 2">
+                    <g id="Layer_1-2" data-name="Layer 1">
+                        <path class="cls-1" d="M689.47,199.48C642.29,583.76,46.38,583.09,0,198.83H1.45C94.4,122.07,238.78-73.28,344.85,30A96.81,96.81,0,0,1,387.41,3.46c93.42-28.57,221.77,127.18,301.65,196Z"/>
+                        <path class="cls-2" d="M392.6,462.83a215.16,215.16,0,0,1-27.09-1.5c-7.05-1-12.17-9.61-11.44-19.22.69-9,6.24-15.69,12.74-15.69a8.8,8.8,0,0,1,1.36.1,197.28,197.28,0,0,0,23.68,1.21c28.54,0,78.69-4.56,126.87-31.41a9.89,9.89,0,0,1,4.86-1.31c5.06,0,9.84,4.11,11.88,10.88,2.69,8.95-.46,19.17-7,22.83-52,29-104.93,34.11-135.83,34.11Z"/>
+                        <path class="cls-2" d="M241.57,69a77,77,0,0,1-18.19,2.35c-11.92,0-20.47-3.57-21.31-9.87-1.22-9.22,14.48-20.81,35.07-25.87a77,77,0,0,1,18.2-2.36c11.9,0,20.44,3.56,21.28,9.87C277.84,52.35,262.16,63.91,241.57,69Z"/>
+                    </g>
+                </g>
+            </svg>
+            <svg id="mouth" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430.55 198.09">
+                <defs>
+                    <style>.cls-3{fill:black;}</style>
+                </defs>
+                <g id="Layer_2" data-name="Layer 2">
+                    <g id="Layer_1-2" data-name="Layer 1">
+                        <path class="cls-3" d="M430.55,78.78c-66.23,158.16-363.78,160-430.55,0C91.29,65.29,169.67,3.24,215.29,0,261.07,3.26,339.29,65.31,430.55,78.78Z"/>
+                    </g>
+                </g>
+            </svg>
+            <div id="hideQuote">
+                <button id="quoteMark">&rdquo;</button>
+            </div>
+            <div id="mouth-container">
+                <div id="smile-container"></div>
+                <div id="speech-container"></div>
+            </div>
+            <button id="randoButton"><span id="randoNext" class="glyphicon glyphicon-refresh"></span></button>
+        </div>
+    </main>
+</body>
+</html>
+
+<script>
+    $(document).ready(function() {
+        $("#randoButton").click(function () {
+            var colors = ["purple", "blue", "green", "yellow", "orange", "cyan", "magneta", "brown", "tan", "pink"];
+            function getColor() {
+                index = Math.floor(Math.random() * colors.Length);
+                console.log(index);
+                return $(colors[index]);
+            }
+            var color = getColor();
+            console.log(color);
+            $("html, body").css("background-image", "radial-gradient(circle, grey 5%, #efd3ce 55%, " + $(color) + " 90%)" );
+            $("#randoNext").css("color", $(color));
+            $("#quoteMark").css("color", $(color));
+            $("#hideQuote").stop();
+            $("#hideQuote").fadeOut(100);
+            $( "#mouth" ).toggle({ effect: "scale", direction: "horizontal"}).toggle({ effect: "scale", direction: "horizontal", });
+            $("#hideQuote").fadeIn(3000);
+        });
+    });
+</script>

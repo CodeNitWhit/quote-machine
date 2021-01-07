@@ -1,0 +1,72 @@
+:root {
+    --background: purple;
+  }
+
+html, body { 
+    margin:0; 
+    padding:0; 
+    overflow:hidden;
+    background-image: radial-gradient(circle, grey 5%, #efd3ce 55%, var(--background) 90%);
+}
+
+button {
+    border-style:none;
+    background-color: transparent;
+}
+
+svg#lips { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+  /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    width:100%;
+    height:auto;
+    max-height:100%;
+    background-color:transparent;
+}
+
+svg#mouth { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+  /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    width:80%;
+    max-height:55%;
+}
+
+#randoButton {
+    border-radius:30%;
+    border-style: none;
+    background-color: #efd3ce;
+    width:100px;
+    height:100px;
+    position:fixed;
+    bottom:0;
+    right:0;
+}
+
+#randoNext {
+    font-size: 70px;
+    color: var(--background);
+}
+
+#quoteMark {
+    color:var(--background);
+    height:150px;
+    width:150px;
+    text-align: center;
+    font-size:150px;
+    font-weight:normal;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+  /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
+button#quoteMark {
+    background-image: radial-gradient(grey 5%, #efd3ce 5%,black 100%);
+    border-radius:50%;
+}
