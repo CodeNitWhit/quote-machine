@@ -60,7 +60,7 @@ svg#mouth {
 
 #quoteMark {
     font-size: 20vmin;
-    text-shadow: 2px 2px white;
+    text-shadow: 2px 2px #efd3ce;
     color:var(--background);
     position: fixed;
     top: 50%;
@@ -71,4 +71,19 @@ svg#mouth {
 
 .halfIt {
     transform: scaleY(.6);
+}
+
+#quote {
+
+}
+
+.showQuote {
+    width: 70vw;
+    height: 40vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  /* bring your own prefixes */
+    background-color: #efd3ce;
+    border-radius:15%;
 }

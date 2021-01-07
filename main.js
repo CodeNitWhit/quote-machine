@@ -35,9 +35,19 @@ function animateLips() {
     //$("#mouth").css("transform", "translate(-50%, -50%)");
     $(".hideQuote").fadeIn(4000);
 }
+function looping() {
+    $("#quoteMark").slideToggle(700, looping);
+}
+
 $(document).ready(function() {
+    $("#quote").hide();
+    looping();
     $("#randoButton").click(function() {
+        $("#quote").hide();
         animateLips();
         setNewColor();
+    });
+    $("#quoteMark").click(function() {
+        $("#quote").fadeToggle(1000);
     });
 });
