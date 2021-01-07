@@ -21,10 +21,19 @@ function setNewColor() {
     $('#randoNext').css("color", color);
 }
 function animateLips() {
-    $("#hideQuote").stop();
-    $("#hideQuote").fadeOut(100);
-    $( "#mouth" ).toggle({ effect: "scale", direction: "horizontal"}).toggle({ effect: "scale", direction: "horizontal", });
-    $("#hideQuote").fadeIn(3000);
+    var mouthHeight = $("#mouth").css("width");
+    var mouthWidth = $("#mouth").css("width");
+    var lipsHeight = $("#lips").css("width");
+    var lipsWidth = $("#lips").css("width");
+    //alert("Lips: " + lipsWidth + " x " + lipsHeight + "\r\nMouth: " + mouthWidth + " x " + mouthHeight);
+    $(".hideQuote").stop();
+    $(".hideQuote").fadeOut(100);
+    $( "#lips" ).toggle({ effect: "scale", direction: "vertical"}).toggle({ effect: "scale", direction: "vertical"});
+    $( "#mouth" ).toggle({ effect: "scale", direction: "vertical" }).toggle({ effect: "scale", direction: "vertical" });
+    //alert("test");
+    //$("#lips").css("transform", "translate(-50%, -50%)");
+    //$("#mouth").css("transform", "translate(-50%, -50%)");
+    $(".hideQuote").fadeIn(4000);
 }
 $(document).ready(function() {
     $("#randoButton").click(function() {
