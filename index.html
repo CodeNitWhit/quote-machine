@@ -6,8 +6,9 @@
     <title>Animated Quote Machine</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="index.js" defer></script>
 </head>
 <body>
     <main>
@@ -47,25 +48,3 @@
     </main>
 </body>
 </html>
-
-<script>
-    $(document).ready(function() {
-        $("#randoButton").click(function () {
-            var colors = ["purple", "blue", "green", "yellow", "orange", "cyan", "magneta", "brown", "tan", "pink"];
-            function getColor() {
-                index = Math.floor(Math.random() * colors.Length);
-                console.log(index);
-                return $(colors[index]);
-            }
-            var color = getColor();
-            console.log(color);
-            $("html, body").css("background-image", "radial-gradient(circle, grey 5%, #efd3ce 55%, " + $(color) + " 90%)" );
-            $("#randoNext").css("color", $(color));
-            $("#quoteMark").css("color", $(color));
-            $("#hideQuote").stop();
-            $("#hideQuote").fadeOut(100);
-            $( "#mouth" ).toggle({ effect: "scale", direction: "horizontal"}).toggle({ effect: "scale", direction: "horizontal", });
-            $("#hideQuote").fadeIn(3000);
-        });
-    });
-</script>
