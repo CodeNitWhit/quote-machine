@@ -56,6 +56,7 @@ svg#mouth {
 #randoNext {
     font-size: 5vmax;
     color: var(--background);
+    text-align: center;
 }
 
 #quoteMark {
