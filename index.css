@@ -11,7 +11,6 @@ html, body {
 
 body {
     border-radius:50%;
-    background: rgb(153,152,152);
     background: radial-gradient(circle, rgba(153,152,152,1) 15%, rgba(239,211,206,1) 59%, rgba(199,0,255,0.9710259103641457) 100%);
 }
 
