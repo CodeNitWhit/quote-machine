@@ -1,12 +1,18 @@
 :root {
-    --background: purple;
+    --background: #c700ff;
   }
 
-html, body { 
-    margin:0; 
-    padding:0; 
+html, body {
+    height:100%;
+    margin:0;
+    padding:0;
     overflow:hidden;
-    background-image: radial-gradient(circle, grey 5%, #efd3ce 55%, var(--background) 90%);
+}
+
+body {
+    border-radius:50%;
+    background: rgb(153,152,152);
+    background: radial-gradient(circle, rgba(153,152,152,1) 15%, rgba(239,211,206,1) 59%, rgba(199,0,255,0.9710259103641457) 100%);
 }
 
 button {
@@ -14,7 +20,7 @@ button {
     background-color: transparent;
 }
 
-svg#lips { 
+svg#lips {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -26,7 +32,7 @@ svg#lips {
     background-color:transparent;
 }
 
-svg#mouth { 
+svg#mouth {
     position: fixed;
     top: 50%;
     left: 50%;

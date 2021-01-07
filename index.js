@@ -34,7 +34,6 @@ function setNewColor() {
         1000
     );
 }
-
 /*
 function animateLips() {
     $("#hideQuote").stop();
@@ -43,8 +42,8 @@ function animateLips() {
     $("#hideQuote").fadeIn(3000);
 }
 */
-
 $(document).ready(function() {
+    alert("I'm Alive!!");
     $("#randoButton").click(function() {
         //animateLips();
         setNewColor();
