@@ -15,7 +15,7 @@
     <main>
         <h1></h1>
         <div id=#lip-container>
-            <svg id="lips" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 689.47 487.36">
+            <svg id="lips" class="dimmable" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 689.47 487.36">
                 <defs>
                     <style>.cls-1{fill:red;}.cls-2{fill:#efd3ce;}</style>
                 </defs>
@@ -27,7 +27,7 @@
                     </g>
                 </g>
             </svg>
-            <svg id="mouth" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430.55 198.09">
+            <svg id="mouth" class="dimmable" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430.55 198.09">
                 <defs>
                     <style>.cls-3{fill:black;}</style>
                 </defs>
@@ -37,15 +37,17 @@
                     </g>
                 </g>
             </svg>
-            <div id="mouth-container">
-                <div id="smile-container"></div>
-                <div id="speech-container"></div>
-            </div>
             <div class="hideQuote">
                 <i id="quoteMark" class="fa fa-quote-right"></i>
             </div>
             <div id="quote-container">
-                <div id="quote" class="showQuote"></div>
+                <div id="quote" class="showQuote">
+                    <div id="open-quote-mark" class="fa fa-quote-left"></div>
+                    <p id="quote-text"></p>
+                    <p id="quote-author"></p>
+                    <div id="tweet-quote" class="fa fa-twitter-square"><a id="twitter-quote-link" href="#"></a></div>
+                    <button id="tumblr-quote" class="fa fa-tumblr-square"><a id="tumblr-quote-link" href="#"></a></button>
+                </div>
             </div>
         </div>
         <button id="randoButton"><span id="randoNext" class="glyphicon glyphicon-refresh"></span></button>

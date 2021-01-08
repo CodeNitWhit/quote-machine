@@ -75,16 +75,59 @@ svg#mouth {
 }
 
 #quote {
-
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .showQuote {
-    width: 70vw;
-    height: 40vh;
+    width: 350px;
+    height: 350px;
     position: fixed;
-    bottom: 0;
-    left: 0;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
   /* bring your own prefixes */
     background-color: #efd3ce;
     border-radius:15%;
+    box-shadow:  6px 6px var(--background);
+}
+
+#quote-text {
+    color: var(--background);
+    text-shadow: 1px 1px grey;;
+    font-size:24px;
+    font-weight: 800;
+    text-align: center;
+    width:75%;
+    margin: 0 auto;
+}
+
+#quote-author {
+    color: black;
+    text-shadow: 1px 1px var(--background);
+    font-size:18px;
+    font-weight: 400;
+    text-align: center;
+    width:75%;
+    margin: 0 auto;
+}
+
+#open-quote-mark {
+    padding-top:10px;
+    font-size:50px;
+    text-shadow:2px 2px var(--background);
+    margin-left: 30px;
+}
+
+
+#tweet-quote {
+    font-size:50px;
+    width:50px;
+    height:50px;
+    color:red;
+}
+
+#tumblr-quote {
+
 }
