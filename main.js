@@ -68,6 +68,7 @@ function setNewColor() {
     $('#quote-text').css("color", color);
     $('#quote-author').css("text-shadow", quoteAuthShadow);
     $('#open-quote-mark').css("text-shadow", quoteMarkShadow);
+    $('.quote-link').css("color", color);
 }
 function animateLips() {
     $(".hideQuote").stop();
@@ -124,11 +125,11 @@ $(document).ready(function() {
     });
     $("#quoteMark").click(function() {
         $("#quote").fadeIn(1000);
-        $('#tweet-quote-link').attr(
+        $('#tweet-quote').attr(
             'href',
             'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor)
         );
-        $('#tumblr-quote-link').attr(
+        $('#tumblr-quote').attr(
             'href',
             'https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption=' +
             encodeURIComponent(currentAuthor) +
